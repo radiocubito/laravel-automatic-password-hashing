@@ -1,7 +1,7 @@
-# Automatic password hashing trait.
+# Automatic user password hashing trait.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/radiocubito/laravel-automatic-password-hashing.svg?style=flat-square)](https://packagist.org/packages/radiocubito/laravel-automatic-password-hashing)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/radiocubito/laravel-automatic-password-hashing/run-tests?label=tests)](https://github.com/radiocubito/laravel-automatic-password-hashing/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/radiocubito/laravel-automatic-password-hashing/Tests?label=tests)](https://github.com/radiocubito/laravel-automatic-password-hashing/actions?query=workflow%3ATests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/radiocubito/laravel-automatic-password-hashing.svg?style=flat-square)](https://packagist.org/packages/radiocubito/laravel-automatic-password-hashing)
 
 
