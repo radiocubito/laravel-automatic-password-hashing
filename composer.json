@@ -44,16 +44,6 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Radiocubito\\AutomaticPasswordHashing\\AutomaticPasswordHashingServiceProvider"
-            ],
-            "aliases": {
-                "AutomaticPasswordHashing": "Radiocubito\\AutomaticPasswordHashing\\AutomaticPasswordHashingFacade"
-            }
-        }
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

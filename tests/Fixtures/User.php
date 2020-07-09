@@ -2,9 +2,9 @@
 
 namespace Radiocubito\AutomaticPasswordHashing\Tests\Fixtures;
 
-use Radiocubito\AutomaticPasswordHashing\HashPassword;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Radiocubito\AutomaticPasswordHashing\HashPassword;
 
 class User extends Authenticatable
 {

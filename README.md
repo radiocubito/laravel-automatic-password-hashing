@@ -5,7 +5,17 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/radiocubito/laravel-automatic-password-hashing.svg?style=flat-square)](https://packagist.org/packages/radiocubito/laravel-automatic-password-hashing)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This package provides a trait that will automatically hash the password when saving the User model.
+
+```php
+$user = User::create([
+    'name' => 'John Doe',
+    'email' => 'john@example.com',
+    'password' => 'password'
+]);
+
+echo $user->password; // ouputs "$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi"
+```
 
 ## Installation
 
@@ -15,30 +25,23 @@ You can install the package via composer:
 composer require radiocubito/laravel-automatic-password-hashing
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="Radiocubito\AutomaticPasswordHashing\AutomaticPasswordHashingServiceProvider" --tag="migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-```bash
-php artisan vendor:publish --provider="Radiocubito\AutomaticPasswordHashing\AutomaticPasswordHashingServiceProvider" --tag="config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
 ## Usage
 
+Your User model should use the Radiocubito\AutomaticPasswordHashing\HashPassword trait.
+
+Here's an example of how to implement the trait:
+
 ``` php
-$laravel-automatic-password-hashing = new Radiocubito\AutomaticPasswordHashing();
-echo $laravel-automatic-password-hashing->echoPhrase('Hello, Radiocubito!');
+namespace App;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Radiocubito\AutomaticPasswordHashing\HashPassword;
+
+class User extends Authenticatable
+{
+    use Notifiable, HashPassword;
+}
 ```
 
 ## Testing
